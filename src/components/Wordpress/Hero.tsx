@@ -35,17 +35,6 @@ const Hero = () => {
     },
   };
 
-  const logoIn = {
-    hidden: { opacity: 0, y: -10, scale: 0.98, filter: "blur(6px)" },
-    show: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      filter: "blur(0px)",
-      transition: { duration: 0.6, ease: easeOut },
-    },
-  };
-
   const wheelIn = {
     hidden: { opacity: 0, scale: 0.9, rotate: -8, filter: "blur(8px)" },
     show: {
@@ -115,7 +104,6 @@ const Hero = () => {
           }}
         />
 
-     
         {/* Headline + copy + CTA (middle) */}
         <div
           style={{ margin: "70px 0 30px 0" }}
