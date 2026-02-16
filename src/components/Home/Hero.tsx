@@ -1,8 +1,15 @@
 import { ArrowRight } from "lucide-react";
+import Hand from "../../assets/hand.png";
 
 const Hero = () => {
   return (
-    <section className="home_hero" aria-label="Hero">
+    <section className="home_hero relative" aria-label="Hero">
+      <img
+        className="absolute w-100 z-[-1] -left-13 top-60"
+        src={Hand}
+        alt=""
+      />
+
       <div className="home_heroInner">
         <h1 className="home_heroTitle">
           Swift & <span className="home_heroAccent">Affordable</span> Hosting

@@ -14,7 +14,7 @@ const Navbar = () => {
     () => [
       { label: "Product", href: "#", hasDropdown: true },
       { label: "Solutions", href: "#", hasDropdown: true },
-      { label: "Trusted AI", href: "#" },
+      { label: "Trusted AI", href: "/trusted-by" },
       { label: "About", href: "#" },
     ],
     [],

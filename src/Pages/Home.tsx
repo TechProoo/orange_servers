@@ -2,6 +2,11 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Navbar from "../components/Home/Navbar";
 import Hero from "../components/Home/Hero";
+import TextCarousel from "../components/Home/TextCarousel";
+import Divider from "../components/Divider";
+import TrustedBy from "../components/Home/TrustedBy";
+import Dev from "../components/Home/Dev";
+import PlatformImpact from "../components/Home/PlatformImpact";
 
 const Home = () => {
   const bgRef = useRef<HTMLDivElement | null>(null);
@@ -64,12 +69,13 @@ const Home = () => {
           ref={bgRef}
           style={{
             backgroundImage: `
-  linear-gradient(135deg, 
-    rgba(255,245,240,1) 0%, 
-    rgba(255,175,140,0.62) 26%, 
-    rgba(255,135,85,0.58) 56%, 
-    rgba(254,98,29,0.62) 100%
-  ),
+linear-gradient(135deg, 
+  rgba(255,245,240,1) 0%, 
+  rgba(255,175,140,0.62) 26%, 
+  rgba(255,135,85,0.58) 56%, 
+  rgba(255,120,60,0.55) 100%
+),
+
   radial-gradient(circle at 18% 24%, rgba(255,255,255,0.62) 0%, transparent 54%),
   radial-gradient(circle at 78% 68%, rgba(254,98,29,0.38) 0%, transparent 66%),
   radial-gradient(circle at 42% 82%, rgba(255,160,120,0.32) 0%, transparent 74%),
@@ -84,6 +90,21 @@ const Home = () => {
 
         <div className="relative z-1 ">
           <Hero />
+        </div>
+        <div className="relative z-1 mt-20">
+          <TextCarousel />
+        </div>
+        <Divider />
+        <div className="relative z-1 ">
+          <TrustedBy />
+        </div>
+
+        <div className="relative z-1 ">
+          <Dev />
+        </div>
+
+        <div className="relative z-1 ">
+          <PlatformImpact />
         </div>
       </div>
     </div>
