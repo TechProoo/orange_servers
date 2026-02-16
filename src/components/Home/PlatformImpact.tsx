@@ -103,7 +103,7 @@ const PlatformImpact = () => {
       <div className="impact__ctaWrap" aria-label="Get started">
         <div className="impact__ctaInner">
           <h3 className="impact__ctaTitle">
-            {/* After migrating, sites feel more */}
+            After migrating, sites feel more
             <span className="impact__ctaItalic"> confident</span>
           </h3>
 
