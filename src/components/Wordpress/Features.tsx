@@ -6,7 +6,7 @@ const Features = () => {
       <div className="fe_text text-center mb-30">
         <h1 className="text-4xl font-bold">
           Optimized for every{" "}
-          <span className="text-(--primary) uppercase font-extrabold">
+          <span className="text_style text-(--primary) uppercase font-extrabold">
             workload
           </span>
         </h1>

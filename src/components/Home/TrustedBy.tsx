@@ -7,7 +7,7 @@ const TrustedBy = () => {
   );
 
   return (
-    <section className="trustedBy" aria-label="Trusted by">
+    <section id="trusted-by" className="trustedBy" aria-label="Trusted by">
       <div className="trustedBy__inner">
         <h2 className="trustedBy__title">
           loved by

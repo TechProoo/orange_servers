@@ -214,6 +214,7 @@ const Dev = () => {
 
   return (
     <section
+      id="developers"
       ref={(el) => {
         sectionRef.current = el;
       }}

@@ -149,10 +149,13 @@ const Pricing = () => {
     <section id="pricing" className="pricing_section">
       <div className="pricing_container">
         <header className="pricing_header">
-          <h2 className="pricing_title">Get a quote</h2>
+          <h2 className="pricing_title">
+            Get a <span className="text_style">quote</span>
+          </h2>
           <p className="pricing_subtitle">
-            Tell us about your WordPress site(s) and we’ll recommend the best
-            plan for speed, security, and near‑zero downtime.
+            Tell us about{" "}
+            <span className="text_style">your WordPress site(s)</span> and we’ll
+            recommend the best plan for speed, security, and near‑zero downtime.
           </p>
         </header>
 
@@ -160,7 +163,8 @@ const Pricing = () => {
           <div className="quote_info">
             <div className="quote_kicker">Quick estimate</div>
             <h3 className="quote_heading">
-              Managed WordPress, tailored to you
+              Managed <span className="text_style">WordPress</span>, tailored to
+              you
             </h3>
             <p className="quote_copy">
               Add one or multiple websites. We’ll review your needs (migration,

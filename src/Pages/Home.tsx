@@ -7,6 +7,9 @@ import Divider from "../components/Divider";
 import TrustedBy from "../components/Home/TrustedBy";
 import Dev from "../components/Home/Dev";
 import PlatformImpact from "../components/Home/PlatformImpact";
+import Pricing from "../components/Home/Pricing";
+import Testimonial from "../components/Wordpress/Testimonial";
+import Footer from "../components/Wordpress/Footer";
 
 const Home = () => {
   const bgRef = useRef<HTMLDivElement | null>(null);
@@ -84,7 +87,7 @@ linear-gradient(135deg,
 `,
           }}
         />
-        <div className="pt-7 z-1 relative">
+        <div className="pt-7 relative">
           <Navbar />
         </div>
 
@@ -105,6 +108,18 @@ linear-gradient(135deg,
 
         <div className="relative z-1 ">
           <PlatformImpact />
+        </div>
+
+        <div className="relative z-1 ">
+          <Testimonial />
+        </div>
+
+        <div className="relative z-1 ">
+          <Pricing />
+        </div>
+
+        <div className="relative z-1 ">
+          <Footer />
         </div>
       </div>
     </div>

@@ -8,6 +8,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Wordpress from "./Pages/Wordpress";
 import Home from "./Pages/Home";
 import TrustedByPage from "./Pages/TrustedBy";
+import Shared from "./Pages/Shared";
+import Cloud from "./Pages/Cloud";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,6 +42,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/wordpress" element={<Wordpress />} />
+      <Route path="/shared" element={<Shared />} />
+      <Route path="/cloud" element={<Cloud />} />
       <Route path="/trusted-by" element={<TrustedByPage />} />
     </Routes>
   );

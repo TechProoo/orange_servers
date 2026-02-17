@@ -3,37 +3,37 @@ import Hand from "../../assets/hand.png";
 
 const Hero = () => {
   return (
-    <section id="home" className="home_hero relative" aria-label="Hero">
-      <img
-        className="absolute w-100 z-[-1] -left-13 top-60"
-        src={Hand}
-        alt=""
-      />
+    <section className="home_hero sharedHero relative" aria-label="Shared hero">
+      <img className="sharedHero_deco" src={Hand} alt="" aria-hidden />
 
       <div className="home_heroInner">
+        <div className="home_heroKicker">Shared Hosting</div>
+
         <h1 className="home_heroTitle">
-          Swift & <span className="home_heroAccent">Affordable</span> Hosting
+          Fast launches. Stable uptime.{" "}
+          <span className="home_heroAccent">No fuss</span>.
         </h1>
 
         <p className="home_heroSub">
-          Selecting the ideal web hosting provider can become overwhelming.
+          Everything you need to get online — SSL, email, and databases
+          included.
         </p>
 
         <p className="home_heroBody">
-          Yes, I agree. There are many different web hosting providers to choose
-          from, and it can be difficult to know which one is right for you.
-          That&apos;s why we&apos;re here to help.
+          Pick a plan, publish your site, and grow at your own pace.
+          OrangeServers Shared Hosting is built for everyday websites that still
+          deserve premium reliability.
         </p>
 
         <div className="home_heroCtas" aria-label="Primary actions">
-          <a className="home_heroCtaPrimary" href="#">
-            <span className="home_heroCtaPrimaryText">Hosting Plans</span>
+          <a className="home_heroCtaPrimary" href="#pricing">
+            <span className="home_heroCtaPrimaryText">See Plans</span>
             <span className="home_heroCtaPrimaryIcon" aria-hidden="true">
               <ArrowRight size={18} />
             </span>
           </a>
-          <a className="home_heroCtaSecondary" href="#">
-            Support/Ticket
+          <a className="home_heroCtaSecondary" href="#features">
+            What’s Included
           </a>
         </div>
 

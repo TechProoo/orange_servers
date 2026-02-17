@@ -157,7 +157,7 @@ const Testimonial = () => {
         <header className="testimonials_header">
           <h2 className="testimonials_title">
             What Our Clients{" "}
-            <span className="testimonials_titleAccent">Say</span>
+            <span className="testimonials_titleAccent text_style">Say</span>
           </h2>
           <p className="testimonials_subtitle">
             Our clients send us a bunch of smiles with our services and we love

@@ -6,16 +6,15 @@ import Logo from "../../assets/orange-servers-logo.png";
 type HomeNavItem = {
   label: string;
   href: string;
-  hasDropdown?: boolean;
 };
 
 const Navbar = () => {
   const items: HomeNavItem[] = useMemo(
     () => [
-      { label: "Product", href: "#", hasDropdown: true },
-      { label: "Solutions", href: "#", hasDropdown: true },
-      { label: "Trusted AI", href: "/trusted-by" },
-      { label: "About", href: "#" },
+      { label: "Home", href: "#home" },
+      { label: "Platform", href: "#platform" },
+      { label: "Testimonials", href: "#testimonials" },
+      { label: "Pricing", href: "#home-pricing" },
     ],
     [],
   );
@@ -60,7 +59,7 @@ const Navbar = () => {
   }, [activeIndex]);
 
   return (
-    <div className="home_navbar z-5 flex justify-center">
+    <div className="home_navbar flex justify-center">
       <nav className="flex justify-evenly items-center m-auto w-full">
         <div className="nav_logo">
           <img className="home_navLogo" src={Logo} alt="OrangeServers" />
@@ -106,9 +105,12 @@ const Navbar = () => {
                     onFocus={(e) => moveHighlightTo(e.currentTarget)}
                   >
                     <span className="home_navPillText">{item.label}</span>
-                    {item.hasDropdown ? (
-                      <ChevronDown size={16} className="home_navPillIcon" />
-                    ) : null}
+                    <ChevronDown
+                      size={16}
+                      className="home_navPillIcon"
+                      style={{ opacity: 0 }}
+                      aria-hidden="true"
+                    />
                   </a>
                 </li>
               );

@@ -20,7 +20,9 @@ const Sponsors = () => {
       <div className="sponsors_container">
         <header className="sponsors_header">
           <p className="sponsors_kicker">Trusted payments</p>
-          <h2 className="sponsors_title">Powered by Industry Leaders</h2>
+          <h2 className="sponsors_title">
+            Powered by <span className="text_style">Industry</span> Leaders
+          </h2>
           <p className="sponsors_subtitle">
             Secure, globally recognized providers your customers already trust.
           </p>

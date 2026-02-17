@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import FrameImage from "../../assets/frame.png";
+import MotionGraphic from "../../assets/motion-graphic-6993aa0f6d2bafd319b6b2f6.mp4";
 
 type Props = {
   id?: string;
@@ -13,6 +13,20 @@ const PlatformSupport = ({ id, variant = "standalone" }: Props) => {
   const sectionRef = useRef<HTMLElement | null>(null);
   const floatTweenRef = useRef<gsap.core.Tween | null>(null);
   const tlRef = useRef<gsap.core.Timeline | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const videoEl = videoRef.current;
+    if (!videoEl) return;
+
+    videoEl.playbackRate = 0.5;
+    const playPromise = videoEl.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(() => {
+        // Autoplay may be blocked in some contexts; ignore.
+      });
+    }
+  }, []);
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -99,7 +113,8 @@ const PlatformSupport = ({ id, variant = "standalone" }: Props) => {
             <div className="support__badge">Platform Support</div>
 
             <h2 className="support__title">
-              on-demand <span className="support__titleItalic">support</span>
+              on-demand{" "}
+              <span className="support__titleItalic text_style">support</span>
               <br />
               for always-on teams
             </h2>
@@ -117,7 +132,9 @@ const PlatformSupport = ({ id, variant = "standalone" }: Props) => {
               our team the confidence to ship faster and stay protected.”
             </blockquote>
 
-            <div className="support__byline">OrangeServers Platform Team</div>
+            <div className="support__byline text_style">
+              OrangeServers Platform Team
+            </div>
 
             <a className="support__button" href="#">
               <span>Meet your platform</span>
@@ -129,7 +146,19 @@ const PlatformSupport = ({ id, variant = "standalone" }: Props) => {
 
           <div className="support__media" data-support-media aria-hidden="true">
             <div className="support__frame">
-              <img className="support__frameImg" src={FrameImage} alt="" />
+              <video
+                ref={videoRef}
+                className="support__frameVideo"
+                src={MotionGraphic}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                onLoadedMetadata={(e) => {
+                  e.currentTarget.playbackRate = 0.5;
+                }}
+              />
             </div>
           </div>
         </div>

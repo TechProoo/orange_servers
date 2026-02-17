@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import Logo from "../../assets/orange-servers-logo.png";
 
@@ -49,9 +50,9 @@ const Navbar = () => {
       <div className="nav_backdrop" aria-hidden />
 
       <div className="nav_container">
-        <a className="nav_brand" href="#top" aria-label="OrangeServers home">
+        <Link className="nav_brand" to="/" aria-label="OrangeServers home">
           <img className="nav_logo" src={Logo} alt="OrangeServers" />
-        </a>
+        </Link>
 
         <nav className="nav_links" aria-label="Primary">
           {links.map((l) => (

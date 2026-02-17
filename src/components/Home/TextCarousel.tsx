@@ -204,6 +204,7 @@ const TextCarousel = () => {
 
   return (
     <section
+      id="platform"
       className="platform-carousel"
       aria-label="Platform feature carousel"
     >

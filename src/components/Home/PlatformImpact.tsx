@@ -61,6 +61,7 @@ const PlatformImpact = () => {
 
   return (
     <section
+      id="impact"
       ref={(el) => {
         sectionRef.current = el;
       }}
@@ -73,7 +74,7 @@ const PlatformImpact = () => {
         </div>
 
         <h2 className="impact__title">
-          support <span className="impact__titleItalic">every</span> team
+          support <span className=" text_style">every</span> team
           <br />
           to ship reliable websites
         </h2>
